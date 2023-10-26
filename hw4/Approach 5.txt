@@ -1,0 +1,11 @@
+Approach 5
+
+Initialize two variables, low and high, representing the minimum and maximum possible fractions in the range [0, 1] (since the smallest fraction is 1/arr[-1], and the largest is 1/1).
+
+Perform a binary search between low and high to find the kth smallest fraction. In each iteration, calculate the mid-point mid between low and high and count how many fractions in the array are less than or equal to mid using a two-pointer approach.
+
+If the count is greater than or equal to k, update high to mid, indicating that the kth smallest fraction is between low and mid. Otherwise, update low to mid, indicating that the kth smallest fraction is between mid and high.
+
+Repeat the binary search until low is sufficiently close to high, and return the fraction low as the kth smallest prime fraction.
+
+The overall time complexity is O(log(max_prime) * n)

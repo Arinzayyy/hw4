@@ -1,0 +1,12 @@
+Approach 3
+
+
+Convert the max heap into a max-heap-like structure by negating all elements in the array. This effectively reverses the order of elements, turning them into a min-heap-like structure.
+
+Use the heapq module (Python's built-in heap library) to create a heap from the modified array.
+
+Extract the top k elements from the heap. Since the heap is a min-heap with the modified values, you will get the largest k elements in the original max heap.
+
+Negate the results to revert them to their original values.
+
+The time complexity is dominated by O(k * log n).

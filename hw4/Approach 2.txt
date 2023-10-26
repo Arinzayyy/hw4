@@ -1,0 +1,11 @@
+Approach 2
+
+Perform a binary search to find the index i in the sorted array arr such that arr[i] is either equal to x or the closest integer to x.
+
+Initialize two pointers, left and right, to expand outwards from index i. Initially, set left = i and right = i + 1.
+
+While k > 0, repeatedly choose the closer of the elements at arr[left] and arr[right] to x and add it to the result list. Then, move the corresponding pointer left or right accordingly.
+
+Continue this process until k elements are added to the result list.
+
+Sort the result list in ascending order and return it.

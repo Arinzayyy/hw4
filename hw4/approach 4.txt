@@ -1,0 +1,9 @@
+approach 4
+
+Initialize variables: minLength to store the minimum length subarray found so far, sumArray to track the cumulative sum of elements, and a deque (monoQueue) to maintain a non-increasing order of elements' indices.
+
+Iterate through the nums array, and at each step, update the sumArray by adding the current element's value.
+
+While sumArray is greater than or equal to k, pop elements from the left of the deque and update the minLength. These popped elements correspond to subarrays with a sum at least k. Continue this process until sumArray is no longer greater than or equal to k.
+
+Finally, return minLength if it has been updated during the iteration; otherwise, return -1.

@@ -1,0 +1,15 @@
+Approach 1
+
+Create a dictionary (hash map) to count the frequency of each element in the nums array.
+
+Traverse through the nums array and populate the dictionary with the frequency counts.
+
+Create a min-heap (priority queue) to keep track of the k most frequent elements. You will store elements in the heap along with their frequencies.
+
+Traverse through the dictionary and push the elements along with their frequencies into the min-heap. If the size of the min-heap exceeds k, pop the element with the lowest frequency to maintain the heap's size at k.
+
+After processing all the elements in the dictionary, the min-heap will contain the k most frequent elements.
+
+Extract the elements from the min-heap and add them to a result list.
+
+The time complexity of the code I provided is O(n log k)
